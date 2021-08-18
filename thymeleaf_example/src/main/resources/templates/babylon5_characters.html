@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>thymeleaf_example</title>
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h2 th:text="'Characters from, ' + ${message} + ', the best show ever!'"></h2>
+      </div>
+
+      <ul>
+        <li th:each="character : ${characters}" th:text="${character}"></li>
+      </ul>
+
+    </main>
+
+</body>
+</html>
