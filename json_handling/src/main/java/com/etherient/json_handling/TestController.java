@@ -21,7 +21,7 @@ public class TestController {
   /**
    * Method to handle a POST request to /getAccount.
    *
-   * @param inPerson A Person object constructed for JSON in the POST body in the form:
+   * @param inPerson A Person object constructed from JSON in the POST body in the form:
    *                   { id : 999 }
    * @return         A Person object, which will be serialized to JSON in the form:
    *                   { id : 999, firstName : "xxx", lastName : "xxx", age : 99 }
