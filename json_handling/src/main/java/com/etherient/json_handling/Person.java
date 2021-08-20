@@ -12,19 +12,27 @@ import java.lang.reflect.Field;
 public class Person {
 
 
-  // A unique ID to identify the person with.
+  /**
+   * A unique ID to identify the person with.
+   */
   private int id;
 
 
-  // The person's first name.
+  /**
+   * The person's first name.
+   */
   private String firstName;
 
 
-  // The person's last name.
+  /**
+   * The person's last name.
+   */
   private String lastName;
 
 
-  // The person's age.
+  /**
+   * The person's age.
+   */
   private int age;
 
 
@@ -130,35 +138,35 @@ public class Person {
   } /* End setAge(). */
 
 
-/**
- * Overridden toString method.
- *
- * @return A reflexively-built string representation of this bean.
- */
-public String toString() {
+  /**
+   * Overridden toString method.
+   *
+   * @return A reflexively-built string representation of this bean.
+   */
+  public String toString() {
 
-  String str = null;
-  StringBuilder sb = new StringBuilder(1000);
-  sb.append("[").append(super.toString()).append("]={");
-  boolean firstPropertyDisplayed = false;
-  try {
-    java.lang.reflect.Field[] fields = this.getClass().getDeclaredFields();
-    for (Field field : fields) {
-      if (firstPropertyDisplayed) {
-        sb.append(", ");
-      } else {
-        firstPropertyDisplayed = true;
+    String str = null;
+    StringBuilder sb = new StringBuilder(1000);
+    sb.append("[").append(super.toString()).append("]={");
+    boolean firstPropertyDisplayed = false;
+    try {
+      java.lang.reflect.Field[] fields = this.getClass().getDeclaredFields();
+      for (Field field : fields) {
+        if (firstPropertyDisplayed) {
+          sb.append(", ");
+        } else {
+          firstPropertyDisplayed = true;
+        }
+        sb.append(field.getName()).append("=").append(field.get(this));
       }
-      sb.append(field.getName()).append("=").append(field.get(this));
+      sb.append("}");
+      str = sb.toString().trim();
+    } catch (IllegalAccessException iae) {
+      iae.printStackTrace();
     }
-    sb.append("}");
-    str = sb.toString().trim();
-  } catch (IllegalAccessException iae) {
-    iae.printStackTrace();
-  }
-  return str;
+    return str;
 
-} // End toString().
+  } // End toString().
 
 
 } /* End class. */

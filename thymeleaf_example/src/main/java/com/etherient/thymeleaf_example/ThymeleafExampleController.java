@@ -18,12 +18,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ThymeleafExampleController {
 
 
-  // Value comes from application.properties.
+  /**
+   * Value comes from application.properties.
+   */
   @Value("${message}")
   private String message;
 
 
-  // The list of Babylon 5 characters to show.
+  /**
+   * The list of Babylon 5 characters to show.
+   */
   private final List<String> characters =
     Arrays.asList( "John", "Delenn", "Michael", "Zack", "Stephen", "Lita", "Susan" );
 
