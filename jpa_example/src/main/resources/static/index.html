@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>jpa_example</title>
+
+    <style>
+      .outputDiv {
+        font-family : monospace;
+        white-space : pre;
+        width : 600px;
+        height : 200px;
+        border : 2px solid #000000;
+        padding : 10px;
+        overflow : auto;
+      }
+    </style>
+
+    <script>
+
+      async function getPerson() {
+
+        const response = await fetch("/api/getByID", {
+          method : "POST",
+          mode : "cors",
+          headers : { "Content-Type": "application/json", "Accept": "application/json" },
+          body : JSON.stringify({ id : document.getElementById("personID").value })
+        });
+        document.getElementById("person").innerHTML = await response.text();
+
+      }
+
+      async function getPeople() {
+
+        const response = await fetch("/api/getByLastName", {
+          method : "POST",
+          mode : "cors",
+          headers : { "Content-Type": "application/json", "Accept": "application/json" },
+          body : JSON.stringify({ lastName : "Jackson" })
+        });
+        document.getElementById("people").innerHTML = await response.text();
+
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1>jpa_example</h1>
+
+    <label for="personID">Person ID: </label><input type="text" id="personID">
+    <button onClick="getPerson();">Get Person</button>
+    <div id="person" class="outputDiv"></div>
+
+    <br><br>
+
+    <button onClick="getPeople();">Get People</button>
+    <div id="people" class="outputDiv"></div>
+
+  </body>
+
+</html>
