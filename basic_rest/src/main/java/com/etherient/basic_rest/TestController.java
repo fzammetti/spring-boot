@@ -1,6 +1,7 @@
 package com.etherient.basic_rest;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 
+  // Injected value from application.properties file.
+  @Value("${myProp}")
+  private String myProp;
+
+
   /**
    * Handler for the /helloWorld endpoint.
    *
@@ -21,6 +27,8 @@ public class TestController {
    */
   @RequestMapping("/helloWorld")
   public String helloWorld() {
+
+    System.out.println("myProp = " + this.myProp);
 
     return "Hello, from the TestController!";
 
