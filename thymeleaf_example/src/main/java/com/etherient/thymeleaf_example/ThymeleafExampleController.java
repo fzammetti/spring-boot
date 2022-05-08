@@ -19,10 +19,12 @@ public class ThymeleafExampleController {
 
 
   /**
-   * Value comes from application.properties.
+   * Values comes from application.properties.
    */
   @Value("${message}")
   private String message;
+  @Value("${maven.app}")
+  private String mavenApp;
 
 
   /**
@@ -40,6 +42,8 @@ public class ThymeleafExampleController {
    */
   @GetMapping("/")
   public String index(final Model inModel) {
+
+    System.out.println("mavenApp = " + this.mavenApp);
 
     // Add the message and character list to the model that the view template will use.
     inModel.addAttribute("message", this.message);
