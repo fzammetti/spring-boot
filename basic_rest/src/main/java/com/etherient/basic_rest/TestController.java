@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * A simple controller for RESTful requests.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @RestController
 public class TestController {

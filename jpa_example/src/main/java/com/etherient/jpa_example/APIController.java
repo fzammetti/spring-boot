@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * A controller to handle the getAccount POST request.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @Controller
 @RequestMapping("/api")

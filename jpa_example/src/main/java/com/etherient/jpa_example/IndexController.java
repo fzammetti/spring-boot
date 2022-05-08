@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * A controller to handle the getAccount POST request.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @Controller
 public class IndexController {

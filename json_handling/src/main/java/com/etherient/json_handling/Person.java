@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 /**
  * A class representing a person.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 public class Person {
 

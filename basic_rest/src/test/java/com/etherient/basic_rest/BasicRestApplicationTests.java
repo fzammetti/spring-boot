@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * A simple unit test for the TestController.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @SpringBootTest
 @AutoConfigureMockMvc

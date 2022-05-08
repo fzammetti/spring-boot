@@ -11,7 +11,7 @@ import javax.persistence.Id;
 /**
  * A class representing a person.  Used as a JPA entity.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @Entity
 public class Person {

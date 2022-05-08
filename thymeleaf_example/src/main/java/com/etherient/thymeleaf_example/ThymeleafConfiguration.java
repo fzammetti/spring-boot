@@ -12,7 +12,7 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
  * A configuration bean to make Spring Boot load Thymeleaf templates off the file system rather than the classpath so
  * that any changes to the template happens immediately (just need to refresh the browser you're viewing it in).
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 @Configuration
 public class ThymeleafConfiguration {

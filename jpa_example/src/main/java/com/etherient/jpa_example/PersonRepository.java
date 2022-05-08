@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * A JPA repository for performing CRUD operations on Person entities.
  *
- * @author <a href="mailto:fzammetti@etheriebt.com">Frank W. Zammetti</a>.
+ * @author <a href="mailto:fzammetti@etherient.com">Frank W. Zammetti</a>.
  */
 public interface PersonRepository extends CrudRepository<Person, Long> {
 
